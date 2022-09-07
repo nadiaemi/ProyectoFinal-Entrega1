@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<span class="site-heading-lower">CARGA DE OTROS PRODUCTOS</span>
+{% endblock %}
+
+{% block espacio_de_inicio %}
+
+{% endblock %}
+
+{% block espacio_para_formulario %}
+<p>Ingresa los datos del producto</p>
+
+<form action="{% url 'otros' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock %}

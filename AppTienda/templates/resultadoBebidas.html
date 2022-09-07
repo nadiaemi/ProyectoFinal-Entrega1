@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<span class="site-heading-lower">RESULTADOS DE BÚSQUEDA</span>
+{% endblock %}
+
+{% block espacio_de_inicio %}
+
+{% endblock %}
+
+{% block espacio_para_formulario %}
+
+<h1>RESULTADO DE BEBIDAS</h1>
+
+{% if bebidas %}
+
+    <ul>
+        {% for bebida in bebidas %}
+            <li>{{bebida.nombre}}</li>
+            <li>{{bebida.marca}}</li>
+            <li>{{bebida.precio}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No se encontraron bebidas</p>
+{% endif %}
+
+{% endblock %}

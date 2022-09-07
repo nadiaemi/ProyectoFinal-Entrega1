@@ -1,0 +1,28 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<span class="site-heading-lower">BUSQUEDA DE BEBIDAS</span>
+{% endblock %}
+
+{% block espacio_de_inicio %}
+
+{% endblock %}
+
+{% block espacio_para_formulario %}
+
+<p>Ingresa el nombre o parte del nombre del producto que estás buscando</p>
+
+<form action="{% url 'buscarBebidas' %}" method="GET">
+    
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+
+
+</form>
+
+{{ mensaje }}
+
+{% endblock %}

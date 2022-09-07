@@ -1,0 +1,32 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<span class="site-heading-lower">La app de la tienda</span>
+{% endblock %}
+{% block espacio_de_inicio %}
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">                                             
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src= "{% static 'assets/img/intro.jpg' %}" alt="..." />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-lower">¡Bienvenidos!</span>
+                </h2>
+                <p class="mb-3">Esta es la aplicación de carga y búsqueda de productos de la tienda. La misma se divide en Comidas, Bebidas y Otros Productos, donde se podrán cargar nuevos ítems o buscarlos en nuestra base de datos. Es muy fácil de utilizar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block espacio_para_formulario %}
+<div class="cta-inner bg-faded text-center rounded">
+    <h2 class="section-heading mb-4">
+        <span class="section-heading-lower">¿CÓMO UTILIZARLO?</span>
+    </h2>
+    <p class="mb-0">En las secciones de COMIDAS, BEBIDAS Y OTROS encontrarás los formularios donde ingresaras el nombre, la marca y el precio del producto. Mientras que en las secciones de búsqueda ingresarás el nombre del producto o una parte del mismo, donde te redigirá a otra página con el resultado.</p>
+</div>
+{% endblock %}

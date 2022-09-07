@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<span class="site-heading-lower">RESULTADOS DE BÚSQUEDA</span>
+{% endblock %}
+
+{% block espacio_de_inicio %}
+
+{% endblock %}
+
+{% block espacio_para_formulario %}
+
+<h1>RESULTADO DE COMIDAS</h1>
+
+{% if comidas %}
+
+    <ul>
+        {% for comida in comidas %}
+            <li>{{comida.nombre}}</li>
+            <li>{{comida.marca}}</li>
+            <li>{{comida.precio}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No se encontraron comidas</p>
+{% endif %}
+
+{% endblock %}

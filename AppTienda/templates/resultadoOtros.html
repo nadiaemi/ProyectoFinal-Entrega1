@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+<span class="site-heading-lower">RESULTADOS DE BÚSQUEDA</span>
+{% endblock %}
+
+{% block espacio_de_inicio %}
+
+{% endblock %}
+
+{% block espacio_para_formulario %}
+
+<h1>RESULTADO DE OTROS PRODUCTOS</h1>
+
+{% if otros %}
+
+    <ul>
+        {% for otro in otros %}
+            <li>{{otro.nombre}}</li>
+            <li>{{otro.marca}}</li>
+            <li>{{otro.precio}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No se encontraron otros productos</p>
+{% endif %}
+
+{% endblock %}
